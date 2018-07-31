@@ -16,7 +16,8 @@
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-6 col-md-4" id="card-padding-k">
          <%= link_to cocktail_path(cocktail) do %>
-        <div class="k-card" style="background-image: url(<%= image_path "pooja.jpg" %>);">
+        <div class="k-card" style="background-image:
+         url('<%= cl_image_path cocktail.photo %>')">
           <div class="k-card-category">Popular
             <div>
               <h2><%= cocktail.name %></h2>
