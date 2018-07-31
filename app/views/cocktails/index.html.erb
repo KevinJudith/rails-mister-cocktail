@@ -1,21 +1,34 @@
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+    <div class="k-banner" style="background-image: url(<%= image_path "cocktail-navbar.jpg" %>);">
+      <div class="banner-content">
+        <h1>Cocktailme</h1>
+        <!-- <a class="btn btn-primary btn-lg">Start now</a> -->
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
 
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-    <div class="col-md-4">
-      <%= link_to cocktail_path(cocktail) do %>
-        <div class="card text-center" style="width: 18rem;">
-          <img class="card-img-top" <%= image_tag "cocktail.jpg" %>
-          <div class="card-body">
-            <h5 class="card-title"><%= cocktail.name %></h5>
+      <div class="col-xs-6 col-md-4" id="card-padding-k">
+         <%= link_to cocktail_path(cocktail) do %>
+        <div class="k-card" style="background-image: url(<%= image_path "pooja.jpg" %>);">
+          <div class="k-card-category">Popular
+            <div>
+              <h2><%= cocktail.name %></h2>
+            </div>
           </div>
         </div>
-      <% end %>
+        <% end %>
       </div>
-    <% end %>
+      <% end %>
   </div>
 </div>
+
 
 
 
